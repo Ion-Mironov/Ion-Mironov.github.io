@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	const projects = [
 		{ name: 'Project 1', description: 'Description of Project 1', link: '#' },
 		{ name: 'Project 2', description: 'Description of Project 2', link: '#' },
-		// Add more projects here
+		{ name: 'Project 3', description: 'Description of Project 3', link: 'https://github.com/WeCanCodeIT/donut-maker-IonMironov-main' },
+		{ name: 'Project 4', description: 'Description of Project 4', link: 'https://github.com/WeCanCodeIT/C-Sharp-Final-Magix' },
 	];
 
 	projects.forEach(project => {
