@@ -2,37 +2,111 @@ a {
 	text-decoration: none;
 }
 
-body {
-	background-image: url("assets/background.png");
+html, body {
+	display: flex;
+	flex-direction: column;
+	background-image: url("assets/background.svg");
 	color: white;
-	font-family: Helvetica, sans-serif;
-	font-size: 14pt;
-	margin: 20px;
-	padding: 0;
+	font-family: Inter, "Segoe UI", sans-serif;
+	font-size: 1em;
+	word-spacing: 0.05em;
+	height: 100%;
+}
+
+
+.content-wrapper {
+	flex: 1;			/* This will make the content-wrapper fill the available space */
 }
 
 
 header {
 	color: white;
-	text-align: center;
 	padding: 1em 0;
-	margin-right: 20px;
+	margin-right: 1%;
 }
 
 	header nav {
 		display: flex;
-		justify-content: center;
+		justify-content: right;
 	}
 
 
-footer {
-	color: white;
-	text-align: center;
-	padding: 1em 0;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20%;
 }
+
+	.left-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-left: 10%;
+	}
+
+	.right-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-right: 10%;
+	}
+
+		.right-column p {
+			line-height: 1.6;
+		}
+	
+
+
+.greeting {
+	font-size: 2em;
+	font-weight: bold;
+	color: #f0ad4e;
+}
+
+	.name {
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #fff;
+	}
+	
+	.intro-line {
+		display: flex;
+		align-items: center;
+	}
+
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 2px dotted white;
+}
+
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 200px;
+		background-color: black;
+		color: #fff;
+		font-size: .5em;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		
+		/* Positioning */
+		position: absolute;
+		margin-left: -60px;		/* Use half of the width value */
+		top: 100%;
+		left: 50%;
+		z-index: 1;
+
+		/* Fade-in effect */
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
 
 
 nav a {
@@ -56,5 +130,13 @@ nav a {
 
 
 section {
-	padding: 20px;
+	padding: 1%;
+}
+
+
+footer {
+	color: white;
+	text-align: center;
+	padding: 1em 0;
+	width: 100%;
 }
