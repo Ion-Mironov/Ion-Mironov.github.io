@@ -3,9 +3,10 @@ a {
 }
 
 body {
-	background-image: url("assets/background.svg");
+	background-image: url("assets/background.png");
 	color: white;
-	font-family: Arial, sans-serif;
+	font-family: Helvetica, sans-serif;
+	font-size: 14pt;
 	margin: 20px;
 	padding: 0;
 }
