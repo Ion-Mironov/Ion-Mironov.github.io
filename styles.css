@@ -2,71 +2,90 @@ a {
 	text-decoration: none;
 }
 
+
 html, body {
 	display: flex;
 	flex-direction: column;
 	background-image: url("assets/background.svg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 	font-family: Inter, "Segoe UI", sans-serif;
 	font-size: 1em;
 	word-spacing: 0.05em;
+	line-height: 1.65;
 	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 
 .content-wrapper {
-	flex: 1;			/* This will make the content-wrapper fill the available space */
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
 }
 
 
 header {
 	color: white;
 	padding: 1em 0;
-	margin-right: 1%;
+	margin-right: 4%;
 }
 
 	header nav {
 		display: flex;
-		justify-content: right;
+		justify-content: flex-end;
 	}
 
 
 .grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 20%;
+	column-gap: 6rem;
+	height: 100vh;
+	overflow: hidden;
 }
 
 	.left-column {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		padding-left: 10%;
+		padding-top: 5%;
+		padding-left: 15%;
 	}
 
 	.right-column {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
-		padding-right: 10%;
+		padding-right: 15%;
+		height: 100%;
+		overflow-y: auto;
 	}
 
-		.right-column p {
-			line-height: 1.6;
+		.right-column > section:first-child {
+			margin-top: 5%;
 		}
-	
+
+		.right-column > section:last-child {
+			margin-bottom: 5%;
+		}
 
 
 .greeting {
 	font-size: 2em;
 	font-weight: bold;
 	color: #f0ad4e;
+	padding-top: 1%;
 }
 
 	.name {
 		font-size: 1.5em;
 		font-weight: bold;
-		color: #fff;
+		color: white;
 	}
 	
 	.intro-line {
@@ -75,27 +94,33 @@ header {
 	}
 
 
+.pronunciation-highlight {
+	color: #f0ad4e;
+}
+
+
 .tooltip {
 	position: relative;
 	display: inline-block;
-	border-bottom: 2px dotted white;
+	border-bottom: 2.5px dotted white;
 }
 
 	.tooltip .tooltiptext {
 		visibility: hidden;
-		width: 200px;
+		width: 175%;
 		background-color: black;
-		color: #fff;
-		font-size: .5em;
+		color: white;
+		font-size: .55em;
 		text-align: center;
 		border-radius: 6px;
 		padding: 5px 0;
 		
 		/* Positioning */
 		position: absolute;
-		margin-left: -60px;		/* Use half of the width value */
-		top: 100%;
+		margin-left: -60%;
+		bottom: 100%;
 		left: 50%;
+		transform: translateY(10%);		/* Adjusts vertical position to create a small gap */
 		z-index: 1;
 
 		/* Fade-in effect */
@@ -109,34 +134,32 @@ header {
 		}
 
 
-nav a {
-	color: white;
+.projects-list {
+	list-style-type: none;
+	padding: 0;
 }
 
-	nav ul {
-		padding: 0;
-		list-style-type: none;
-		margin: 0;
+.project-item {
+	position: relative;
+}
+
+.project-cell {
+	display: grid;
+	padding: 1rem;
+	transition: all 0.3s ease;
+}
+
+.hover-background {
+	position: absolute;
+	top: 8%;
+	left: 1%;
+	right: 1%;
+	bottom: 4%;
+	border-radius: 10px;
+	background-color: rgba(225, 230, 250, 0.1);
+	display: none;
+}
+
+	.project-item:hover .hover-background {
+		display: block;
 	}
-
-		nav ul li {
-			display: inline;
-			margin-right: 20px;
-		}
-
-			nav ul li a {
-				color: white;
-			}
-
-
-section {
-	padding: 1%;
-}
-
-
-footer {
-	color: white;
-	text-align: center;
-	padding: 1em 0;
-	width: 100%;
-}
