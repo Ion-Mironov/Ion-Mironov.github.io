@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+	document.addEventListener("mousemove", function (e) {
+		const glow = document.getElementById("glow-effect");
+		const x = e.clientX;
+		const y = e.clientY;
+		glow.style.background = `radial-gradient(300px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+	});
+
+
 	const aboutSection = document.getElementById("aboutContent");
 	const aboutContent = `
-		<br>a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may strain my sanity.</br>
+		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
 
-		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing a dash of flair to automotive tech, using my imagination to design custom car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I merge my tech skills with my passion for cars.</br>
+		<p>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</p>
 	`;
 
     aboutSection.innerHTML = aboutContent;
@@ -31,16 +40,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		const projectItem = document.createElement("li");
 		projectItem.classList.add("project-item");
 		projectItem.innerHTML = `
-			<span class="hover-background"></span>
-			<div class="project-cell">
-				<h3>${project.name}</h3>
-				<p>${project.description}</p>
-				<a href="${project.link}" target="_blank">View Project</a>
-			</div>
+			<a href="${project.link}" target="_blank" class="project-link">
+				<span class="hover-background"></span>
+				<div class="project-cell">
+					<h3>${project.name}</h3>
+					<p>${project.description}</p>
+				</div>
+			</a>
 		`;
 
 		projectsList.appendChild(projectItem);
 	});
 
 	projectsSection.appendChild(projectsList);
+
 });
