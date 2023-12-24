@@ -41,21 +41,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		{
 			name: "Virtual Pets Re-Imagined",
-			description: "During my C#/.NET Full Stack Developer boot camp at We Can Code IT, I teamed up with another student to reinvent nostalgia with 'Virtual Pets Re-Imagined.' Drawing inspiration from the classic Tamagotchi, we crafted an interactive virtual pet application in C#. This project not only honed our coding skills but also brought a beloved digital pastime into the modern era.",
+			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project.",
 			link: "https://github.com/Ion-Mironov/Virtual-Pet",
 			technologies: ["C#", "Visual Studio 2023"]
 		},
 
 		{
 			name: "Wormhole Creator",
-			description: "For my mid-term project at We Can Code IT, I embarked on a solo journey to develop 'Wormhole Creator,' a unique twist on the 'Cookie Clicker' game genre. Inspired by the sci-fi thriller 'Event Horizon,' this game allows players to build and manage their own wormholes.",
+			description: "For the mid-term project at We Can Code IT, we had to go solo and create a variation of the 'Cookie Clicker' game, using what we had learned so far. Inspired by the sci-fi thriller 'Event Horizon', I decided to put a unique spin on it by allowing players to create their own wormholes.",
 			link: "https://github.com/Ion-Mironov/Wormhole-Creator",
 			technologies: ["JavaScript", "HTML", "CSS", "Visual Studio 2023"]
 		},
 
 		{
 			name: "Magix",
-			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for Magic: The Gathering trade-ins at card shops. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project, a culmination of our skills in C#, JavaScript, ASP.NET, and database management, showcased our full-stack development expertise.",
+			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
 			link: "https://github.com/Ion-Mironov/Final-Project-Magix",
 			technologies: ["C#", "ASP.NET", "OOP", "Database Management", "HTML", "CSS", "Visual Studio 2023", "Adobe Photoshop"]
 		},
