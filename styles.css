@@ -2,13 +2,13 @@ a {
 	text-decoration: none;
 }
 
-	a:link, a:visited {
-		color: rgb(235, 243, 255);
-	}
+a:link, a:visited {
+	color: rgb(235, 243, 255);
+}
 
-	a:hover {
-		color: rgb(235, 243, 255);
-	}
+a:hover {
+	color: rgb(235, 243, 255);
+}
 
 
 html, body {
@@ -25,136 +25,121 @@ html, body {
 	padding: 0;
 }
 
+
+/* ----------------------------------- */
+/* ------ Start of grid content ------ */
 .content-wrapper {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 }
 
-	.grid-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 6rem;
-		height: 100%;
-		overflow: hidden;
-	}
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 6rem;
+	height: 100%;
+}
 
-		.left-column {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			padding-top: 10%;
-			padding-left: 15%;
-		}
 
-		.intro-container {
-			display: flex;
-			align-items: baseline;
-		}
+/* ------ Left column content ------ */
+.left-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-top: 10%;
+	padding-left: 15%;
+}
 
-			.greeting {
-				font-size: 2em;
-				font-weight: bold;
-				color: rgb(240, 173, 78);
-				padding-top: 1%;
-			}
+.intro-container {
+	display: flex;
+	align-items: baseline;
+}
+
+.greeting {
+	font-size: 2em;
+	font-weight: bold;
+	color: rgb(240, 173, 78);
+	padding-top: 1%;
+}
+
+.name {
+	display: inline;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+}
+
+.pronunciation-highlight {
+	color: rgb(240, 173, 78);
+}
+
+.tooltip {
+	position: relative;
+	border-bottom: 2.5px dotted white;
+}
 	
-			.name {
-				display: inline;
-				font-size: 1.5em;
-				font-weight: bold;
-				color: white;
-			}
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 175%;
+	background-color: black;
+	color: white;
+	font-size: .55em;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
 
-				.pronunciation-highlight {
-					color: rgb(240, 173, 78);
-				}
+	/* Positioning */
+	position: absolute;
+	margin-left: -60%;
+	bottom: 100%;
+	left: 50%;
+	transform: translateY(10%);
+	z-index: 1;
 
-				.tooltip {
-					position: relative;
-					border-bottom: 2.5px dotted white;
-				}
-	
-					.tooltip .tooltiptext {
-						visibility: hidden;
-						width: 175%;
-						background-color: black;
-						color: white;
-						font-size: .55em;
-						text-align: center;
-						border-radius: 6px;
-						padding: 5px 0;
-		
-						/* Positioning */
-						position: absolute;
-						margin-left: -60%;
-						bottom: 100%;
-						left: 50%;
-						transform: translateY(10%);
-						z-index: 1;
-		
-						/* Fade-in effect */
-						opacity: 0;
-						transition: opacity 0.3s ease;
-					}
-		
-					.tooltip:hover .tooltiptext {
-						visibility: visible;
-						opacity: 1;
-					}
+	/* Fade-in effect */
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
 
 
-		.right-column {
-			display: flex;
-			flex-direction: column;
-			padding-right: 15%;
-			height: 100%;
-			overflow-y: auto;
-		}
+/* ------ Right column content ------ */
+.right-column {
+	display: flex;
+	flex-direction: column;
+	padding-right: 15%;
+	height: 100%;
+	overflow-y: auto;
+}
 
-			.right-column>section:first-child {
-				margin-top: 5%;
-			}
+.right-column>section:first-child {
+	margin-top: 5%;
+}
 
-			.right-column>section:last-child {
-				margin-bottom: 5%;
-			}
+.right-column>section:last-child {
+	margin-bottom: 5%;
+}
 
 
+/* ------ Projects List Styling ------ */
 .projects-list {
 	list-style-type: none;
 	padding: 0;
 }
 
-	.project-item {
-		position: relative;
-	}
+.project-item {
+	position: relative;
+}
 
-	.project-item:hover .project-cell h3 {
-		color: rgb(240, 173, 78);
-	}
-
-		.project-cell {
-			display: grid;
-			padding: 1rem;
-		}
-
-			.hover-background {
-				position: absolute;
-				top: 1rem;
-				left: 0.3rem;
-				right: 0.3rem;
-				bottom: 0.8rem;
-				border-radius: 10px;
-				background-color: rgba(225, 230, 250, 0.1);
-				pointer-events: none;
-				opacity: 0;
-				transition: opacity 0.3s ease;
-			}
-
-			.project-item:hover .hover-background {
-				opacity: 1;
-			}
+.project-cell {
+	display: grid;
+	padding: 1rem;
+}
 
 .project-title {
 	font-size: 20px;
@@ -162,6 +147,40 @@ html, body {
 	padding-top: 1%;
 }
 
+	.project-item:hover .project-cell .project-title {
+		color: rgb(240, 173, 78);
+	}
+
+	.hover-background {
+		position: absolute;
+		top: 1rem;
+		left: 0.3rem;
+		right: 0.3rem;
+		bottom: 0.8rem;
+		border-radius: 10px;
+		background-color: rgba(225, 230, 250, 0.1);
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+		.project-item:hover .hover-background {
+			opacity: 1;
+		}
+
+
+/* Styles for smaller screens */
+/* @media (max-width: 1023px) {
+	.project-item {
+	}
+}
+
+@media (max-width: 599px) {
+	.project-item {
+	}
+} */
+
+/* ------ 'Technology Used' icon styling ------ */
 .technologies-used {
 	display: flex;
 	flex-wrap: wrap;
@@ -170,23 +189,26 @@ html, body {
 	padding: 0 0 0.5rem 0;
 }
 
-	.technologies-used li {
-		margin-top: 8px;
-		margin-right: 6px;
-	}
+.technologies-used li {
+	margin-top: 8px;
+	margin-right: 6px;
+}
 
-	.tech-label {
-		display: flex;
-		align-items: center;
-		background-color: rgba(94, 234, 212, 0.1); 
-		color: rgb(240, 173, 78);
-		border-radius: 9999px;
-		padding: 4px 12px;
-		font-size: 12px;
-		font-weight: bold;
-	}
+.tech-label {
+	display: flex;
+	align-items: center;
+	background-color: rgba(94, 234, 212, 0.1); 
+	color: rgb(240, 173, 78);
+	border-radius: 9999px;
+	padding: 4px 12px;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* ------ End of grid content ------ */
+/* --------------------------------- */
 
 
+/* ------ Misc. Styling ------ */
 section {
 	display: flex;
 }
