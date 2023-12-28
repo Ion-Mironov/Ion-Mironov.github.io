@@ -601,14 +601,14 @@ video {
   scroll-behavior: smooth;
 }
 
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-stone-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 .p-0 {
@@ -687,8 +687,8 @@ video {
   transition-duration: 300ms;
 }
 
-.hover\:opacity-100:hover {
-  opacity: 1;
+.hover\:opacity-50:hover {
+  opacity: 0.5;
 }
 
 @media (min-width: 1024px) {

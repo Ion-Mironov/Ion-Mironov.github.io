@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					<span class="block text-2xl font-bold mb-2">${project.name}</span>
 					<p class="text-slate-200">${project.description}</p>
 				</div>
-				<div class="absolute inset-0 bg-stone-100 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-50 transition-opacity duration-300"></div>
 			</a>
 		`;
 
