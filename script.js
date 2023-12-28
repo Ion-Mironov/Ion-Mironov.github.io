@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				<div class="project-cell text-slate-200">
 					<span class="block text-2xl font-bold mb-2">${project.name}</span>
 					<p class="text-slate-200">${project.description}</p>
+					<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
 				</div>
-				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-50 transition-opacity duration-300"></div>
 			</a>
 		`;
 
