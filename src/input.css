@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-to-br {
+    --gradient-color: rgba(29, 78, 216, 0.15);
+    --gradient-transparent: transparent;
+    background: radial-gradient(600px at center, var(--gradient-color), var(--gradient-transparent) 80%);
+  }
+}
