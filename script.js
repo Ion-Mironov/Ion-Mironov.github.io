@@ -7,30 +7,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	glowEffect.className = "pointer-events-none absolute inset-0 z-30 transition duration-300";
 	gradientContainer.appendChild(glowEffect);
 
-
 	// => Have radial gradient glow follow mouse cursor
 	document.addEventListener("mousemove", function(e) {
-		const x = e.clientX / window.innerWidth;
-		const y = e.clientY / window.innerHeight;
+		const rect = gradientContainer.getBoundingClientRect();
+		const x = (e.clientX - rect.left) / rect.width;
+		const y = (e.clientY - rect.top) / rect.height;
 		glowEffect.style.background = `radial-gradient(300px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
 	});
 
 
-
 	// =====> About Content <===== //
-	
-	const aboutSection = document.getElementById("aboutContent");
-	const aboutContent = `
-		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
+	// const aboutSection = document.getElementById("aboutContent");
+	// const aboutContent = `
+	// 	<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
 
-		<p>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</p>
-	`;
-	aboutSection.innerHTML = aboutContent;
+	// 	<p>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</p>
+	// `;
+
+	// aboutSection.innerHTML = aboutContent;
 
 
 
 	// =====> Projects Content <===== //
-	
 	const projectsSection = document.getElementById("projectsContent");
 	const projectsList = document.createElement("ul");
 	projectsList.classList.add("list-none", "p-0", "z-20");
@@ -69,24 +67,24 @@ document.addEventListener("DOMContentLoaded", function() {
 	];
 
 	projects.forEach(project => {
+
 		const techLabels = project.technologies.map(tech =>
-			`<li>
-				<div class="tech-label">${tech}</div>
-			</li>`
+			`<li class="flex items-center rounded-lg bg-orange-300/50 px-3 py-1 text-sm font-semibold leading-5 text-orange-100">${tech}</li>`
 			).join("");
 
 		const projectItem = document.createElement("li");
-		projectItem.classList.add("project-item mb-8");
+		projectItem.classList.add("mb-8");
 		projectItem.innerHTML = `
 			<a href="${project.link}" target="_blank" class="block project-link relative">
 				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
 				<div class="project-cell text-slate-200 p-4">
-					<span class="project-title block text-2xl font-bold mb-2">${project.name}</span>
+					<span class="block text-2xl font-bold mb-2">${project.name}</span>
 					<p class="text-slate-200">${project.description}</p>
-					<ul class="technologies-used">${techLabels}</ul>
+					<ul class="technologies-used flex space-x-2 mt-2">${techLabels}</ul>
 				</div>
 			</a>
 		`;
+
 		projectsList.appendChild(projectItem);
 	});
 
