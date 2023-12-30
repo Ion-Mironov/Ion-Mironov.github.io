@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		const rect = gradientContainer.getBoundingClientRect();
 		const x = (e.clientX - rect.left) / rect.width;
 		const y = (e.clientY - rect.top) / rect.height;
-		glowEffect.style.background = `radial-gradient(300px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+		glowEffect.style.background = `radial-gradient(200px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
 	});
 
 
 	// =====> About Content <===== //
-	// const aboutSection = document.getElementById("aboutContent");
-	// const aboutContent = `
-	// 	<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
+	const aboutSection = document.getElementById("aboutContent");
+	const aboutContent = `
+		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
 
-	// 	<p>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</p>
-	// `;
+		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</br>
+	`;
 
-	// aboutSection.innerHTML = aboutContent;
+	aboutSection.innerHTML = aboutContent;
 
 
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			name: "Magix",
 			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
 			link: "https://github.com/Ion-Mironov/Final-Project-Magix",
-			technologies: ["C#", "ASP.NET", "OOP", "Database Management", "HTML", "CSS", "Visual Studio 2023", "Adobe Photoshop"]
+			technologies: ["C#", "ASP.NET", "OOP", "HTML", "CSS", "Visual Studio 2023", "Adobe Photoshop"]
 		},
 	];
 
