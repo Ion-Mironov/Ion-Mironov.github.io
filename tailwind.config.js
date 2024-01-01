@@ -13,6 +13,4 @@ export const theme = {
 	extend: {},
 }
 
-export const plugins = [
-	require('@tailwindcss/typography')
-]
+export const plugins = []

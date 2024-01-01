@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// => Create a radial gradient glow
 	const gradientContainer = document.getElementById("gradientContainer");
 	const glowEffect = document.createElement("div");
-	glowEffect.className = "pointer-events-none absolute inset-0 z-30 transition duration-300";
+	glowEffect.className = "pointer-events-none lg:absolute inset-0 z-30 transition duration-300";
 	gradientContainer.appendChild(glowEffect);
 
 	// => Have radial gradient glow follow mouse cursor
@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		const rect = gradientContainer.getBoundingClientRect();
 		const x = (e.clientX - rect.left) / rect.width;
 		const y = (e.clientY - rect.top) / rect.height;
-		glowEffect.style.background = `radial-gradient(200px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+		glowEffect.style.background = `radial-gradient(300px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
 	});
+
 
 
 	// =====> About Content <===== //
@@ -76,14 +77,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		projectItem.classList.add("mb-8");
 		projectItem.innerHTML = `
 			<a href="${project.link}" target="_blank" class="group block relative">
-				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+				<div class="absolute inset-0 bg-slate-100 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
 				<div class="project-cell p-4">
+
 					<div class="flex items-center space-x-3">
-						<span class="block text-2xl text-slate-200 group-hover:text-orange-300 duration-150 font-bold mb-2">${project.name}</span>
-						<svg class="h-6 w-6 stroke-slate-200 stroke-2 group-hover:stroke-orange-300 hover:stroke-2" viewBox="0 0 30 30">
+						<span class="block text-2xl text-sky-100 group-hover:text-orange-300 duration-150 font-bold mb-2">${project.name}</span>
+						<svg class="h-6 w-6 stroke-sky-100 stroke-2 group-hover:stroke-orange-300 group-hover:stroke-2" viewBox="0 0 30 30">
 						<path d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/></svg>
 					</div>
-					<p class="text-slate-200 mt-1">${project.description}</p>
+
+					<p class="text-sky-200 group-hover:text-sky-100 mt-1">${project.description}</p>
 					<ul class="technologies-used flex space-x-2 mt-3">${techLabels}</ul>
 				</div>
 			</a>
