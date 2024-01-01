@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		const projectItem = document.createElement("li");
 		projectItem.classList.add("mb-8");
 		projectItem.innerHTML = `
-			<a href="${project.link}" target="_blank" class="block project-link relative">
+			<a href="${project.link}" target="_blank" class="group block relative">
 				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
-				<div class="project-cell text-slate-200 p-4">
-					<span class="block text-2xl font-bold mb-2">${project.name}</span>
-					<p class="text-slate-200">${project.description}</p>
-					<ul class="technologies-used flex space-x-2 mt-2">${techLabels}</ul>
+				<div class="project-cell p-4">
+					<span class="block text-2xl text-slate-200 group-hover:text-orange-300 duration-150 font-bold mb-2">${project.name}</span>
+					<p class="text-slate-200 mt-1">${project.description}</p>
+					<ul class="technologies-used flex space-x-2 mt-3">${techLabels}</ul>
 				</div>
 			</a>
 		`;

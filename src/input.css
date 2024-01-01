@@ -3,16 +3,6 @@
 @tailwind utilities;
 
 
-
-.pronunciation-text {
-	@apply text-orange-300;
-}
-
-/* Tooltip */
-.group {
-	@apply relative border-b-2 border-dotted;
-}
-
 .tooltiptext {
 	@apply hidden absolute bg-black text-slate-300 text-sm font-medium px-2 py-1 rounded-md text-center whitespace-nowrap;
 	bottom: calc(100% + 5px);
