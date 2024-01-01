@@ -78,7 +78,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			<a href="${project.link}" target="_blank" class="group block relative">
 				<div class="absolute inset-0 bg-slate-200 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
 				<div class="project-cell p-4">
-					<span class="block text-2xl text-slate-200 group-hover:text-orange-300 duration-150 font-bold mb-2">${project.name}</span>
+					<div class="flex items-center space-x-3">
+						<span class="block text-2xl text-slate-200 group-hover:text-orange-300 duration-150 font-bold mb-2">${project.name}</span>
+						<svg class="h-6 w-6 stroke-slate-200 stroke-2 group-hover:stroke-orange-300 hover:stroke-2" viewBox="0 0 30 30">
+						<path d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/></svg>
+					</div>
 					<p class="text-slate-200 mt-1">${project.description}</p>
 					<ul class="technologies-used flex space-x-2 mt-3">${techLabels}</ul>
 				</div>
