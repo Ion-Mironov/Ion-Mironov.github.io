@@ -581,16 +581,28 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .block {
@@ -601,20 +613,40 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-6 {
   height: 1.5rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-6 {
   width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .list-none {
@@ -623,6 +655,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -676,6 +712,10 @@ video {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
+.fill-sky-200 {
+  fill: #bae6fd;
+}
+
 .stroke-sky-100 {
   stroke: #e0f2fe;
 }
@@ -717,6 +757,10 @@ video {
   padding-bottom: 3rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
 .pr-4 {
   padding-right: 1rem;
 }
@@ -738,9 +782,14 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-sm {
@@ -805,6 +854,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -840,8 +895,16 @@ video {
   left: -25%;
 }
 
+.hover\:fill-sky-100:hover {
+  fill: #e0f2fe;
+}
+
 .group\/name:hover .group-hover\/name\:inline-block {
   display: inline-block;
+}
+
+.group:hover .group-hover\:bg-orange-300\/60 {
+  background-color: rgb(253 186 116 / 0.6);
 }
 
 .group:hover .group-hover\:stroke-orange-300 {
@@ -864,6 +927,32 @@ video {
 
 .group:hover .group-hover\:opacity-10 {
   opacity: 0.1;
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .sm\:gap-8 {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -916,5 +1005,13 @@ video {
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:hover\:\!opacity-100:hover {
+    opacity: 1 !important;
+  }
+
+  .group\/list:hover .lg\:group-hover\/list\:opacity-50 {
+    opacity: 0.5;
   }
 }

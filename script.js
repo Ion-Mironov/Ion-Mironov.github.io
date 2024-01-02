@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// =====> About Content <===== //
 	const aboutSection = document.getElementById("aboutContent");
 	const aboutContent = `
-		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician. I'm all about solving tricky tech problems and have a knack for diving deep into analytical challenges, even if it may test my sanity.</p>
+		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician, with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a knack for diving deep into puzzling challenges, even if it may test my sanity.</p>
 
 		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</br>
 	`;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	projects.forEach(project => {
 
 		const techLabels = project.technologies.map(tech =>
-			`<li class="flex items-center rounded-lg bg-orange-300/50 px-3 py-1 text-sm font-semibold leading-5 text-orange-100">${tech}</li>`
+			`<li class="flex items-center rounded-lg bg-orange-300/50 group-hover:bg-orange-300/60 text-orange-100 group-hover:text-sky-100 px-3 py-1 text-sm font-semibold leading-5">${tech}</li>`
 			).join("");
 
 		const projectItem = document.createElement("li");

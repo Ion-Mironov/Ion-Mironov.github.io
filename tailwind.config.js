@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 
 export const content = [
 	"./src/input.css",
@@ -8,7 +8,9 @@ export const content = [
 
 export const theme = {
 	screens: {
-		'lg': '1024px'
+		"sm": "640px",
+		"md": "768px",
+		"lg": "1024px"
 	},
 	extend: {},
 }
