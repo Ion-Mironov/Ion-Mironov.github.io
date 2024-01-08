@@ -771,8 +771,8 @@ video {
   border-style: dotted;
 }
 
-.border-sky-200\/10 {
-  border-color: rgb(186 230 253 / 0.1);
+.border-sky-200\/20 {
+  border-color: rgb(186 230 253 / 0.2);
 }
 
 .bg-black {
@@ -1075,8 +1075,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:border-orange-300\/30 {
-  border-color: rgb(253 186 116 / 0.3);
+.group:hover .group-hover\:border-orange-300\/80 {
+  border-color: rgb(253 186 116 / 0.8);
 }
 
 .group\/link:hover .group-hover\/link\:stroke-orange-300 {

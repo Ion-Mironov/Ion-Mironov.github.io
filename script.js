@@ -39,32 +39,35 @@ document.addEventListener("DOMContentLoaded", function() {
 			name: "Car Instrument Panel",
 			description: "Revving up automotive innovation, I've designed a bespoke car instrument panel, seamlessly integrated with a Raspberry Pi 4 and its touchscreen interface. This custom creation connects directly to my car's OBD-II port, transforming data into dynamic visuals. Crafted with precision in Adobe Illustrator and meticulously coded in VS Code, this project is a true blend of design flair and technical prowess.",
 			link: "https://github.com/Ion-Mironov/Instrument_Panel",
-			imagePreview: "",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/instrument_panel.png",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
 			name: "LED Control Panel",
 			description: "A dynamic touchscreen UI for controlling LED animations on a Raspberry Pi. Crafted in Python and Adobe Illustrator, it’s not just a test tool – it's the first step towards integrating custom LED animations into my car. Imagine animated turn signals, vibrant parking lights, and expressive brake lights, all powered by a Raspberry Pi and designed by me.",
 			link: "https://github.com/Ion-Mironov/LED_Control_Panel",
-			imagePreview: "",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/LED_control_panel.png",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
 			name: "Virtual Pets Re-Imagined",
 			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project.",
 			link: "https://github.com/Ion-Mironov/Virtual-Pet",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/virtual_pet.png",
 			technologies: ["C#", "VS 2022"]
 		},
 		{
 			name: "Wormhole Creator",
 			description: "For the mid-term project at We Can Code IT, we had to go solo and create a variation of the 'Cookie Clicker' game, using what we had learned so far. Inspired by the sci-fi thriller 'Event Horizon', I decided to put a unique spin on it by allowing players to create their own wormholes.",
 			link: "https://github.com/Ion-Mironov/Wormhole-Creator",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/wormhole_creator.png",
 			technologies: ["JavaScript", "HTML", "CSS", "VS 2022"]
 		},
 		{
 			name: "Magix",
 			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
 			link: "https://github.com/Ion-Mironov/Final-Project-Magix",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/magix.png",
 			technologies: ["C#", "ASP.NET", "OOP", "HTML", "CSS", "VS 2022", "Adobe Photoshop"]
 		}
 	];
@@ -108,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				</div>
 
-				<img class="rounded border-2 border-sky-200/10 transition group-hover:border-orange-300/30 sm:order-1 sm:col-span-2 sm:translate-y-1" loading="lazy" width="200" height="48" style="color:transparent" src="${project.imagePreview}">
+				<img class="rounded border-2 border-sky-200/20 transition group-hover:border-orange-300/80 sm:order-1 sm:col-span-2 sm:translate-y-1" loading="lazy" width="200" height="48" style="color:transparent" src="${project.imagePreview}">
 
 			</div>
 		`;
