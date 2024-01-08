@@ -51,19 +51,19 @@ document.addEventListener("DOMContentLoaded", function() {
 			name: "Virtual Pets Re-Imagined",
 			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project.",
 			link: "https://github.com/Ion-Mironov/Virtual-Pet",
-			technologies: ["C#", "VS 2023"]
+			technologies: ["C#", "VS 2022"]
 		},
 		{
 			name: "Wormhole Creator",
 			description: "For the mid-term project at We Can Code IT, we had to go solo and create a variation of the 'Cookie Clicker' game, using what we had learned so far. Inspired by the sci-fi thriller 'Event Horizon', I decided to put a unique spin on it by allowing players to create their own wormholes.",
 			link: "https://github.com/Ion-Mironov/Wormhole-Creator",
-			technologies: ["JavaScript", "HTML", "CSS", "VS 2023"]
+			technologies: ["JavaScript", "HTML", "CSS", "VS 2022"]
 		},
 		{
 			name: "Magix",
 			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
 			link: "https://github.com/Ion-Mironov/Final-Project-Magix",
-			technologies: ["C#", "ASP.NET", "OOP", "HTML", "CSS", "VS 2023", "Adobe Photoshop"]
+			technologies: ["C#", "ASP.NET", "OOP", "HTML", "CSS", "VS 2022", "Adobe Photoshop"]
 		}
 	];
 
