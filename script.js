@@ -39,12 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			name: "Car Instrument Panel",
 			description: "Revving up automotive innovation, I've designed a bespoke car instrument panel, seamlessly integrated with a Raspberry Pi 4 and its touchscreen interface. This custom creation connects directly to my car's OBD-II port, transforming data into dynamic visuals. Crafted with precision in Adobe Illustrator and meticulously coded in VS Code, this project is a true blend of design flair and technical prowess.",
 			link: "https://github.com/Ion-Mironov/Instrument_Panel",
+			imagePreview: "",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
 			name: "LED Control Panel",
 			description: "A dynamic touchscreen UI for controlling LED animations on a Raspberry Pi. Crafted in Python and Adobe Illustrator, it’s not just a test tool – it's the first step towards integrating custom LED animations into my car. Imagine animated turn signals, vibrant parking lights, and expressive brake lights, all powered by a Raspberry Pi and designed by me.",
 			link: "https://github.com/Ion-Mironov/LED_Control_Panel",
+			imagePreview: "",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
@@ -81,14 +83,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		techLabelsList.innerHTML = techLabels;
 
 
+		
+
+
 		const projectItem = document.createElement("li");
 		projectItem.classList.add("mb-12");
 		projectItem.innerHTML = `
 			<div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
 
 				<div class="z-0 absolute hidden rounded-md -inset-x-4 -inset-y-4 transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"></div>
-			
-				<div class="z-10 sm:order-2 sm:col-span-8">
+				<div class="z-10 sm:order-2 sm:col-span-6">
 
 					<a class="inline-flex items-baseline text-lg font-bold lg:text-2xl lg:leading-6 text-sky-100 hover:text-orange-300 focus-visible:text-orange-300 group/link" href="${project.link}" target="_blank">
 						<span class="absolute hidden rounded -inset-x-4 -inset-y-2.5 md:-inset-x-6 md:-inset-y-4 lg:block"></span>
@@ -103,6 +107,8 @@ document.addEventListener("DOMContentLoaded", function() {
 					<ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">${techLabels}</ul>
 
 				</div>
+
+				<img class="rounded border-2 border-sky-200/10 transition group-hover:border-orange-300/30 sm:order-1 sm:col-span-2 sm:translate-y-1" loading="lazy" width="200" height="48" style="color:transparent" src="${project.imagePreview}">
 
 			</div>
 		`;
