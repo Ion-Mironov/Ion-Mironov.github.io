@@ -86,9 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		techLabelsList.innerHTML = techLabels;
 
 
-		
-
-
 		const projectItem = document.createElement("li");
 		projectItem.classList.add("mb-12");
 		projectItem.innerHTML = `
@@ -97,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				<div class="z-0 absolute hidden rounded-md -inset-x-4 -inset-y-4 transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"></div>
 				<div class="z-10 sm:order-2 sm:col-span-6">
 
-					<a class="inline-flex items-baseline text-lg font-bold lg:text-2xl lg:leading-6 text-sky-100 hover:text-orange-300 focus-visible:text-orange-300 group/link" href="${project.link}" target="_blank">
+					<a class="inline-flex items-baseline text-lg font-bold lg:text-2xl lg:leading-6 text-sky-100 hover:text-orange-300 focus-visible:text-orange-300 group/link" href="${project.link}" target="_blank" rel="noreferrer noopener">
 						<span class="absolute hidden rounded -inset-x-4 -inset-y-2.5 md:-inset-x-6 md:-inset-y-4 lg:block"></span>
 						<span class="inline-block">${project.name}
 							<svg class="inline-block h-6 w-6 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px stroke-sky-100 stroke-1 group-hover/link:stroke-orange-300 group-hover/link:stroke-2" viewBox="0 0 30 30">
