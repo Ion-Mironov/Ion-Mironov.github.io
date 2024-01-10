@@ -4,7 +4,7 @@
 
 
 .tooltiptext {
-	@apply hidden absolute bg-black text-slate-300 text-sm font-medium px-2 py-1 rounded-md text-center whitespace-nowrap;
+	@apply hidden absolute rounded-md bg-black text-sm lg:text-base text-slate-100 font-medium text-center lg:whitespace-nowrap lg:px-2 lg:py-1;
 	bottom: calc(100% + 5px);
 	left: -25%;
 }

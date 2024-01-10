@@ -12,24 +12,24 @@ document.addEventListener("DOMContentLoaded", function() {
 		const rect = gradientContainer.getBoundingClientRect();
 		const x = (e.clientX - rect.left) / rect.width;
 		const y = (e.clientY - rect.top) / rect.height;
-		glowEffect.style.background = `radial-gradient(300px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+		glowEffect.style.background =  /* html */`radial-gradient(300px at ${x * 100}% ${y * 100}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
 	});
 
 
 
-	// ====== About Content ====== //
+	// ====== About Content ====== \\
 	const aboutSection = document.getElementById("aboutContent");
-	const aboutContent = `
-		<p>I'm a seasoned IT pro with over 15 years of experience, especially as a Senior IT Field Technician, with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a knack for diving deep into puzzling challenges, even if it may test my sanity.</p>
+	const aboutContent = /* html */ `
+		<p>I'm a seasoned IT professional with over 15 years of experience, especially as a Senior IT Field Technician, with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a knack for diving deep into puzzling challenges, even if it may test my sanity.</p>
 
-		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.</br>
+		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs from scratch are just some of the ways I combine my tech skills with my passion for cars.
 	`;
 
 	aboutSection.innerHTML = aboutContent;
 
 
 
-	// ====== Projects Content ====== //
+	// ====== Projects Content ====== \\
 	const projectsSection = document.getElementById("projectsContent");
 	const projectsList = document.createElement("ul");
 	projectsList.classList.add("group/list");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 		{
 			name: "Virtual Pets Re-Imagined",
-			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project.",
+			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project. And, I couldn't help myself from creating a set of cute ASCII animals.",
 			link: "https://github.com/Ion-Mironov/Virtual-Pet",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/virtual_pet.png",
 			technologies: ["C#", "VS 2022"]
@@ -75,10 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	projects.forEach(project => {
 
 
-		// ----- Create element that lists all technologies used ----- //
+		// ====== Create element that lists all technologies used ====== \\
 		const techLabelsList = document.createElement("ul");
 		const techLabels = project.technologies.map(techName =>
-			`<li class="mr-1.5 mt-2">
+			/* html */ `
+			<li class="mr-1.5 mt-2">
 				<div class="flex items-center rounded-lg text-xs font-normal leading-5 px-[6px] py-[2px] lg:text-sm lg:font-medium lg:leading-6 lg:px-2 lg:py-[1px] bg-orange-300/50 text-slate-100">${techName}</div>
 			</li>`
 		).join("");
@@ -88,22 +89,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		const projectItem = document.createElement("li");
 		projectItem.classList.add("mb-12");
-		projectItem.innerHTML = `
+		projectItem.innerHTML = /* html */ `
 			<div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
 
 				<div class="z-0 absolute hidden rounded-md -inset-x-4 -inset-y-4 transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50"></div>
 				<div class="z-10 sm:order-2 sm:col-span-6">
 
-					<a class="inline-flex items-baseline text-lg font-bold lg:text-2xl lg:leading-6 text-sky-100 hover:text-orange-300 focus-visible:text-orange-300 group/link" href="${project.link}" target="_blank" rel="noreferrer noopener">
+					<a class="group/link inline-flex items-baseline text-lg font-bold lg:text-xl lg:leading-6 text-sky-100 hover:text-orange-300 focus-visible:text-orange-300" href="${project.link}" target="_blank" rel="noreferrer noopener">
 						<span class="absolute hidden rounded -inset-x-4 -inset-y-2.5 md:-inset-x-6 md:-inset-y-4 lg:block"></span>
 						<span class="inline-block">${project.name}
-							<svg class="inline-block h-6 w-6 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px stroke-sky-100 stroke-1 group-hover/link:stroke-orange-300 group-hover/link:stroke-2" viewBox="0 0 30 30">
+							<svg class="inline-block ml-1 stroke-sky-100 h-4 w-4 stroke-1 shrink-0 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-hover/link:stroke-orange-300 group-hover/link:stroke-2 group-focus-visible/link:stroke-orange-300 group-focus-visible/link:stroke-2 motion-reduce:transition-none" viewBox="0 0 30 30">
 								<path d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
 							</svg>
 						</span>
 					</a>
 
-					<p class="mt-2 text-sm lg:text-base text-sky-200 group-hover:text-sky-100 leading-normal">${project.description}</p>
+					<p class="mt-2 text-sm lg:text-base text-sky-100 group-hover:text-sky-100 leading-normal">${project.description}</p>
 					<ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">${techLabels}</ul>
 
 				</div>
