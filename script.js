@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// ====== About Content ====== \\
 	const aboutSection = document.getElementById("aboutContent");
 	const aboutContent = /* html */ `
-		<p>I'm a seasoned IT professional with over 15 years of experience as a Senior IT Field Technician, along with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a knack for diving deep into puzzling challenges, even if it may test my sanity.</p>
+		<p>I'm a seasoned IT professional with over 17 years of experience as a Senior IT Field Technician, complemented with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a tendency to dive deep into puzzling challenges, even if it may test my sanity.</p>
 
 		<br>Off the clock, I'm a car enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs are just some of the ways I combine my tech skills with my passion for cars.
 	`;
@@ -36,36 +36,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	const projects = [
 		{
+			name: "The Racing Trail",
+			description: "A text-based, choose-your-own-adventure game inspired by The Oregon Trail where you compete in random races at varying difficulties. You can win cash prizes and parts which you can use to upgrade your car. Along your journey, you'll experience random events such as having car troubles, finding hidden money caches, and even finding abandoned cars with useable parts!",
+			link: "https://github.com/ion-mironov/The_Racing_Trail",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/the_racing_trail.png",
+			technologies: ["Python", "Pygame", "VS Code", "Adobe Photoshop"]
+		},
+		{
 			name: "Car Instrument Panel",
-			description: "Revving up automotive innovation, I've designed a bespoke car instrument panel, seamlessly integrated with a Raspberry Pi 4 and its touchscreen interface. This custom creation connects directly to my car's OBD-II port, transforming data into dynamic visuals. Crafted with precision in Adobe Illustrator and meticulously coded in VS Code, this project is a true blend of design flair and technical prowess.",
+			description: "I designed a digital car instrument panel that displays on a 7-inch FREENOVE display connected to my Raspberry Pi 4. This all plugs directly into my car's OBD-II port, taking real-time data and displaying it on screen. I used Adobe Illustrator to design the gauges and coded everything in Visual Studio Code.",
 			link: "https://github.com/Ion-Mironov/Instrument_Panel",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/instrument_panel.png",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
 			name: "LED Control Panel",
-			description: "A dynamic touchscreen UI for controlling LED animations on a Raspberry Pi 4. Crafted in Python and Adobe Illustrator, it’s not just a test tool – it's the first step towards integrating custom LED animations into my car. Imagine animated turn signals, vibrant parking lights, and expressive brake lights all powered by an ESP32 microcontroller and designed by me.",
+			description: "A dynamic touchscreen UI for controlling LED animations on my Raspberry Pi 4 and 7-inch FREENOVE touchscreen. Just as I've done with my digital dashboard, I used Adobe Illustrator and Visual Studio Code to handle everything. The animations I've created so far are sequential turn signals, rectangular parking lights, rapid flash 3rd Brake Light, and sequential brake lights. This setup acts as a test bench for everything before I'm satisfied enough to load each animation's code onto a separate ESP32 microcontroller, which will then tie into my personal vehicles' light systems.",
 			link: "https://github.com/Ion-Mironov/LED_Control_Panel",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/LED_control_panel.png",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
-			name: "Virtual Pets Re-Imagined",
-			description: "During my C#/.NET boot camp course at We Can Code IT, we had to pair up and create our own virtual pet program in C# as our first project, and I couldn't help myself from creating a set of cute ASCII animals.",
-			link: "https://github.com/Ion-Mironov/Virtual-Pet",
-			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/virtual_pet.png",
-			technologies: ["C#", "VS 2022"]
-		},
-		{
-			name: "The Racing Trail",
-			description: "a racing game inspired by The Oregon Trail and is a text-based, choose-your-own-adventure where you can do random races (drifting, drag racing, circuit racing, and sprints) at varying difficulties. Winning races will net you cash prices and/or parts that you can use to upgrade your car. Along your journey, you'll experience random events such as having car troubles, finding hidden money caches, and even finding abandoned cars with useable parts!",
-			link: "https://github.com/ion-mironov/The_Racing_Trail",
-			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/the_racing_trail.png",
-			technologies: ["Python", "Pygame", "VS Code 2022", "Adobe Photoshop"]
-		},
-		{
 			name: "Magix",
-			description: "Our final project at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
+			description: "The final project at my C#/.NET boot camp course at We Can Code IT. Our team of five developed an automated inventory management system for 'Magic: The Gathering' trade-ins for a local card shop. My role was front-end development, bringing the interface to life with custom designs and assets made in Photoshop. The project showcased our full-stack development expertise at graduation.",
 			link: "https://github.com/Ion-Mironov/Final-Project-Magix",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/magix.png",
 			technologies: ["C#", "ASP.NET", "OOP", "HTML", "CSS", "VS 2022", "Adobe Photoshop"]
@@ -73,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	];
 
 	projects.forEach(project => {
-
 
 		// ====== Create element that lists all technologies used ====== \\
 		const techLabelsList = document.createElement("ul");
