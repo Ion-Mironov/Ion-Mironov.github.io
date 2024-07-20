@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const aboutContent = /* html */ `
 		<p>I'm a seasoned IT professional with over 15 years of experience as a Senior IT Field Technician, along with a strong background of troubleshooting and analytical skills. I'm all about solving tricky tech problems and have a knack for diving deep into puzzling challenges, even if it may test my sanity.</p>
 
-		<br>Off the clock, I'm a car tech enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs are just some of the ways I combine my tech skills with my passion for cars.
+		<br>Off the clock, I'm a car enthusiast and fabricator. I love bringing some flair to automotive tech, using my imagination to design digital car instrument panels and sleek UI displays from scratch. Designing and building custom car parts (from metal, wood, and even plastics), playing with LEDs, and creating control panel UIs are just some of the ways I combine my tech skills with my passion for cars.
 	`;
 
 	aboutSection.innerHTML = aboutContent;
@@ -44,24 +44,24 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 		{
 			name: "LED Control Panel",
-			description: "A dynamic touchscreen UI for controlling LED animations on a Raspberry Pi. Crafted in Python and Adobe Illustrator, it’s not just a test tool – it's the first step towards integrating custom LED animations into my car. Imagine animated turn signals, vibrant parking lights, and expressive brake lights, all powered by a Raspberry Pi and designed by me.",
+			description: "A dynamic touchscreen UI for controlling LED animations on a Raspberry Pi 4. Crafted in Python and Adobe Illustrator, it’s not just a test tool – it's the first step towards integrating custom LED animations into my car. Imagine animated turn signals, vibrant parking lights, and expressive brake lights all powered by an ESP32 microcontroller and designed by me.",
 			link: "https://github.com/Ion-Mironov/LED_Control_Panel",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/LED_control_panel.png",
 			technologies: ["Python", "PySide6", "pyOBD", "Qt", "QML", "VS Code", "Adobe Illustrator"]
 		},
 		{
 			name: "Virtual Pets Re-Imagined",
-			description: "During my C#/.NET Full Stack Developer boot camp course at We Can Code IT, we had to pair up and create our own Tamagotchi virtual-pet program in C# as our first project. And, I couldn't help myself from creating a set of cute ASCII animals.",
+			description: "During my C#/.NET boot camp course at We Can Code IT, we had to pair up and create our own virtual pet program in C# as our first project, and I couldn't help myself from creating a set of cute ASCII animals.",
 			link: "https://github.com/Ion-Mironov/Virtual-Pet",
 			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/virtual_pet.png",
 			technologies: ["C#", "VS 2022"]
 		},
 		{
-			name: "Wormhole Creator",
-			description: "For the mid-term project at We Can Code IT, we had to go solo and create a variation of the 'Cookie Clicker' game, using what we had learned so far. Inspired by the sci-fi thriller 'Event Horizon', I decided to put a unique spin on it by allowing players to create their own wormholes.",
-			link: "https://github.com/Ion-Mironov/Wormhole-Creator",
-			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/wormhole_creator.png",
-			technologies: ["JavaScript", "HTML", "CSS", "VS 2022"]
+			name: "The Racing Trail",
+			description: "a racing game inspired by The Oregon Trail and is a text-based, choose-your-own-adventure where you can do random races (drifting, drag racing, circuit racing, and sprints) at varying difficulties. Winning races will net you cash prices and/or parts that you can use to upgrade your car. Along your journey, you'll experience random events such as having car troubles, finding hidden money caches, and even finding abandoned cars with useable parts!",
+			link: "https://github.com/ion-mironov/The_Racing_Trail",
+			imagePreview: "https://raw.githubusercontent.com/ion-mironov/ion-mironov.github.io/main/assets/the_racing_trail.png",
+			technologies: ["Python", "Pygame", "VS Code 2022", "Adobe Photoshop"]
 		},
 		{
 			name: "Magix",
